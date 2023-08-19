@@ -1,24 +1,10 @@
 package com.example.javafaker.generator;
 
-//import com.github.javafaker.Faker;
-//import jakarta.annotation.PostConstruct;
-//import org.springframework.stereotype.Component;
-//
-//import java.io.FileWriter;
-//import java.io.IOException;
-////import java.sql.Date;
-//
-//import java.text.SimpleDateFormat;
-//import java.util.Date;
-//import java.util.HashSet;
-//import java.util.Set;
-
-
 import com.github.javafaker.Faker;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -49,9 +35,6 @@ public class UserDataGenerator {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         try (FileWriter writer = new FileWriter(csvFile)) {
-            // CSV 헤더 쓰기
-//            writer.write("created_at,updated_at,nickname,user_account_id,password\n");
-
 
             for (int i = 1; i <= numberOfUsers; i++) {
                 String nickname;
